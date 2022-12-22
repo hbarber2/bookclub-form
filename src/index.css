@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Pavanam', sans-serif;
+    background-color: #FF7A7A;
+}
+
+.container {
+    margin: 5rem auto;
+    background-color: #fff;
+    padding: 4rem;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #b65757;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: .15rem;
+}
+
+h2 {
+    font-size: 1.15rem;
+    color: #464646;
+}
+
+h1,
+h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+    color: #464646;
+    text-decoration: underline;
+    margin: .5rem 0;
+}
+
+p,
+label,
+legend,
+input {
+    font-size: 1rem;
+    color: #464646;
+}
+
+input,
+textarea,
+label,
+select {
+    border: none;
+}
+
+input,
+select,
+textarea {
+    padding: .5rem;
+    background-color: #EEEEEE;
+    width: 100%;
+}
+
+textarea,
+textarea::placeholder {
+    font-family: 'Pavanam', sans-serif;
+    font-size: 1rem;
+}
+
+.personal-info {
+    margin-top: 1rem;
+}
+
+.book-info {
+    margin-top: .5rem;
+}
+
+#genres{
+    width: 100%;
+}
+
+.meet-in-person > input{
+    margin-top: .5rem;
+    padding: .5rem;
+}
+
+legend {
+    margin-bottom: .25rem;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+textarea {
+    resize: none;
+    min-height: 6rem;
+}
+
+label {
+    display: block;
+    margin-bottom: .25rem;
+}
+
+.yes-input,
+.no-input{
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.yes-input > input,
+.no-input > input{
+    width: auto;
+}
+
+.red {
+    color: red;
+}
+
+/*******SUBMIT BUTTON*******/
+
+.submit {
+    border: none;
+    padding: 10px;
+    background-color:#FF7A7A;
+    color: #fff;
+    font-size: 1.25rem;
+    transition: all 1s ease;
+}
+
+.submit:hover {
+    box-shadow: 5px 5px 5px #ccc;
+}
+
+/**********GRID*************/
+
+.first-name {
+    grid-area: first;
+}
+.last-name {
+    grid-area: last;
+}
+.email {
+    grid-area: email;
+}
+.meet-in-person {
+    grid-area: meetInPerson;
+}
+.zipcode {
+    grid-area: zip;
+}
+.radius-travel {
+    grid-area: radius;
+}
+.genres {
+    grid-area: genres;
+}
+.lead{
+    grid-area: leadClub;
+}
+.comments{
+    grid-area: comments;
+}
+
+.submit{
+    grid-area: submit;
+}
+
+.personal-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "first"
+    "last" 
+    "email";
+    row-gap: 2rem;;
+}
+
+.book-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "meetInPerson"
+    "zip" 
+    "radius"
+    "genres"
+    "leadClub" 
+    "comments"
+    "submit";
+    row-gap: 2rem;
+}
+
+@media (min-width: 576px) {
+
+    h1 {
+        font-weight: 400;
+        font-size: 3rem;
+        letter-spacing: .15rem;
+    }
+
+    h2{
+        font-size:1.5rem;
+    }
+    
+    .personal-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "first last email";
+        column-gap: 2rem;
+    }
+    
+    .book-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "meetInPerson zip radius"
+        "genres genres genres"
+        "leadClub comments comments"
+        ". submit .";
+        column-gap: 2rem;
+        row-gap: 1.5rem;
+    }
+}
